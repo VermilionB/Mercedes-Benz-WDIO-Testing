@@ -1,5 +1,6 @@
 import CarPage from "../../objects/car.page";
 import MainPage from "../../objects/main.page";
+import ConfiguratorPage from "../../objects/configurator.page";
 
 describe("Test Suite", () => {
 
@@ -7,7 +8,6 @@ describe("Test Suite", () => {
         await CarPage.open();
         await CarPage.clickCookiesButton();
         await CarPage.clickFilterButton();
-        await browser.pause(5000);
 
         expect(await CarPage.filterButton.getText()).toEqual("Farmari");
     });
@@ -18,9 +18,24 @@ describe("Test Suite", () => {
         await MainPage.clickSearchButton();
         await MainPage.inputSearchField('G63')
         await MainPage.enterSearchField();
-        await browser.pause(5000);
 
         expect(await MainPage.searchField.getValue()).toEqual("G63");
+    })
+
+    it("should test configuration of car", async () => {
+        await CarPage.open();
+        await CarPage.clickCookiesButton();
+        await CarPage.clickConfigurationButton();
+        await ConfiguratorPage.clickColorButton();
+        await ConfiguratorPage.clickBlueColorButton();
+        await ConfiguratorPage.clickWheelsButton();
+        await ConfiguratorPage.clickExpensiveWheelsButton();
+        await ConfiguratorPage.clickAcceptWheelsButton();
+        await ConfiguratorPage.clickConfiguratorCar();
+        await ConfiguratorPage.clickTestDriveButton();
+
+        expect(await ConfiguratorPage.acceptTestDriveButton).toBeDisplayed();
+
     })
 
 });
