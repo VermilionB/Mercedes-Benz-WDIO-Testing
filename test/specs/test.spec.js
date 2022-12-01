@@ -26,6 +26,7 @@ describe("Test Suite", () => {
         await CarPage.open();
         await CarPage.clickCookiesButton();
         await CarPage.maybachCard.moveTo();
+        await browser.pause(5000);
         await CarPage.clickConfigurationButton();
         await ConfiguratorPage.clickColorButton();
         await ConfiguratorPage.clickBlueColorButton();
