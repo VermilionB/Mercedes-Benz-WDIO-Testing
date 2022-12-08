@@ -8,13 +8,13 @@ class ConfiguratorPage extends Page {
 
     get wheelsButton() {
         return $('#first-web-component').shadow$('#cc-app-container-main > div.cc-app-container__main-frame.cc-grid-container > div.cc-app-container__navigation.ng-star-inserted > cc-navigation' +
-            ' > nav > div > ul > li.ng-star-inserted.is-current-group > ul > li.cc-navigation__item.ng-star-inserted.is-active > a')
+            ' > nav > div > ul > li.ng-star-inserted.is-current-group > ul > li:nth-child(2) > a')
     }
 
     get blueColorButton() {
-        return $('#first-web-component').shadow$('#cc-app-container-main > div.cc-app-container__main-frame.cc-grid-container > div.cc-grid-container.ng-star-inserted > div' +
-            ' > div.cc-app-container__content-row-layout-selectables > cc-configuration > div > div > ng-component > ng-component > div' +
-            ' > cc-single-choice > wb-card > div > cc-single-choice-list > div.cc-single-choice-list.ng-star-inserted > div:nth-child(1)')
+        return $('#first-web-component').shadow$('#cc-app-container-main > div.cc-app-container__main-frame.cc-grid-container > div.cc-grid-container.ng-star-inserted' +
+            ' > div > div.cc-app-container__content-row-layout-selectables > cc-configuration > div > div > ng-component > ng-component > div > cc-single-choice' +
+            ' > wb-card > div > cc-single-choice-list > div.cc-single-choice-list.ng-star-inserted > div:nth-child(7)')
     }
 
     get expensiveWheelsButton() {
