@@ -5,7 +5,7 @@ describe("Main Page Testing", () => {
         await MainPage.open();
         await MainPage.clickCookiesButton();
         await MainPage.clickSearchButton();
-        await MainPage.inputSearchField('G63')git
+        await MainPage.inputSearchField('G63')
         await MainPage.enterSearchField();
 
         expect(await MainPage.searchField.getValue()).toEqual("G63");
